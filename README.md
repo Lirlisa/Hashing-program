@@ -1,8 +1,8 @@
 # Hashing-program
 
-    Just a program to calculate hashing code from files or plain text.
+Just a program to calculate hashing code from files or plain text.
 
-    This python program was made for test and practice some python stuff i've learnt.
+This python program was made for test and practice some python stuff i've learnt.
 
 -----------------------------------------------------------------------
 
