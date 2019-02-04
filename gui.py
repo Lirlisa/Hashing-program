@@ -74,7 +74,7 @@ class clase:
 
 root = tk.Tk()
 root.title("Hash!")
-#root.resizable(width=False, height=False)
+root.resizable(width=False, height=False)
 ventana = clase(root)
 
 root.mainloop()
