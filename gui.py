@@ -74,6 +74,7 @@ class clase:
 
 root = tk.Tk()
 root.title("Hash!")
+root.iconbitmap(default='transparent.ico')
 root.resizable(width=False, height=False)
 ventana = clase(root)
 
