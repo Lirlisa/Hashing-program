@@ -35,11 +35,11 @@ if __name__=="__main__":
         quit()
     if argv[1] == "-f":
         try:
-            print(calcFile(argv[3], argv[2]))
+            print("\n"+calcFile(argv[3], argv[2])+"\n")
         except FileNotFoundError:
             print("File not found")
     elif argv[1] == "-t":
-        print(calcStr(argv[2], argv[3]))
+        print("\n"+calcStr(argv[2], argv[3])+"\n")
     else:
         print("Syntax: hashes.py <-f | -t> <algorith> <path | text>")
         print("-f:\thash a file\n-t:\thash plain text")
