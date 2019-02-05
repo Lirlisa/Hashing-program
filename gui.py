@@ -9,6 +9,7 @@ class clase:
     def __init__(self, master):
         self.setFrames(master)
         self.setEntries()
+        self.setText()
         self.setButtons()
         self.setMenus()
 
@@ -31,10 +32,10 @@ class clase:
         self.entry2 = tk.Entry(self.frame2, textvariable=entry2_str, width=50)
         self.entry2.grid(sticky="w")
 
-        self.entry3_str = tk.StringVar()
-        self.entry3_str.set("")
-        self.entry3 = tk.Entry(self.frame3, text=self.entry3_str, bg="white", width=50)
-        self.entry3.pack()
+    def setText(self):
+        self.text3 = tk.Text(self.frame3, bg="white",
+            height=4, width= 64)
+        self.text3.pack()
 
     def setButtons(self):
         self.boton1_browse = tk.Button(self.frame1, text="browse", command=self.arc)
@@ -65,12 +66,15 @@ class clase:
     def hashFile(self):
         try:
             if self.path != "":
-                self.entry3_str.set(hashes.calcFile(self.path, self.menu1_str.get()))
-        except:
-                self.entry3.set("No se puede acceder a la ruta especificada")
+                self.text3.delete(1.0, "end")
+                self.text3.insert(1.0, hashes.calcFile(self.path, self.menu1_str.get()))
+        except FileNotFoundError:
+                self.text3.delete(1.0, "end")
+                self.text3.instert("No se puede acceder a la ruta especificada")
 
     def hashStr(self):
-        self.entry3_str.set(hashes.calcStr(self.menu2_str.get(),self.entry2.get()))
+        self.text3.delete(1.0, "end")
+        self.text3.insert(1.0, hashes.calcStr(self.menu2_str.get(),self.entry2.get()))
 
 root = tk.Tk()
 root.title("Hash!")
