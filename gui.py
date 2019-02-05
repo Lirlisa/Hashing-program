@@ -78,7 +78,10 @@ class clase:
 
 root = tk.Tk()
 root.title("Hash!")
-root.iconbitmap(default='transparent.ico')
+try:
+    root.wm_iconbitmap('transparent.ico')
+except tk.TclError:
+    root.wm_iconbitmap('@transparent.xbm')
 root.resizable(width=False, height=False)
 ventana = clase(root)
 
