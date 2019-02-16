@@ -1,7 +1,7 @@
 import hashlib
 from sys import argv
-# BUF_SIZE is totally arbitrary, change for your app!
-BUF_SIZE = 1024  # lets read stuff in 64kb chunks!
+
+BUF_SIZE = 1024
 
 
 dic = {'sha1':hashlib.sha1,
