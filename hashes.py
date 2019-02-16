@@ -1,7 +1,7 @@
 import hashlib
 from sys import argv
 
-BUF_SIZE = 1024
+BUF_SIZE = 1024*64
 
 
 dic = {'sha1':hashlib.sha1,
