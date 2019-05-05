@@ -70,7 +70,7 @@ class clase:
                 self.text3.insert(1.0, hashes.calcFile(self.path, self.menu1_str.get()))
         except FileNotFoundError:
                 self.text3.delete(1.0, "end")
-                self.text3.instert("No se puede acceder a la ruta especificada")
+                self.text3.insert(1.0, "No se puede acceder a la ruta especificada")
 
     def hashStr(self):
         self.text3.delete(1.0, "end")
